@@ -1,0 +1,433 @@
+/* Variáveis CSS para Cores (Melhora manutenção e reuso) */
+:root
+
+    .menu-principal a {
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 0.9em;
+    margin-right: 3px;
+    --cor-primaria: rgb(0, 0, 66); /* Azul escuro */
+    --cor-destaque: #ceaf00; /* Amarelo/Dourado */
+    --cor-fundo-claro: #f0f0f0;
+    --cor-link: #007bff;
+    --espacamento-base: 1rem; /* 16px */
+
+    }
+
+/* Base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff; /* Fundo principal Branco */
+    line-height: 1.6;
+}
+
+/* Títulos e Tipografia */
+h1 {
+    color: var(--cor-primaria);
+    margin: 5px 0;
+    font-size: 2rem;
+}
+.titulo-intro {
+    color: rgb(15, 0, 69);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+.conteudo-principal h1 {
+    margin-bottom: -3px;
+}
+
+.paragrafo-afastado {
+    margin-top: -3px;
+}
+
+/* -------------------------------------- */
+/* HEADER E NAVEGAÇÃO */
+/* -------------------------------------- */
+
+.header-area {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem; 
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--cor-destaque);
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+/* CORREÇÃO: Alinhamento horizontal da Logo e Título */
+.header-branding {
+    display: flex;
+    align-items: center; 
+    flex-shrink: 0; 
+}
+
+.logo {
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    width: 150px; 
+    height: auto;
+}
+
+.conteudo-principal {
+    margin: 0;
+}
+
+.menu-principal {
+    text-align: center;
+    width: 50%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.menu-principal a {
+    background-color: var(--cor-destaque);
+    color: #333;
+    padding: 0.625rem 0.9375rem; 
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    border-radius: 3px;
+    font-size: 0.85rem; 
+}
+
+.menu-principal a:hover {
+    background-color: #C4A400;
+    color: #FFF;
+}
+
+
+/* -------------------------------------- */
+/* LAYOUT GERAL E SEÇÕES */
+/* -------------------------------------- */
+
+/* Classes para as Novas Seções */
+.section-padrao {
+    padding: 3rem 0; 
+}
+
+.section-padrao .content-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.bg-claro {
+    background-color: var(--cor-fundo-claro);
+}
+
+main {
+    flex-grow: 1;
+}
+.texto-esquerda { 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    /* Removido o margin-top, usando o padding da .section-padrao */
+    margin: 0 auto; 
+    max-width: 1200px;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+}
+
+/* Content Wrap (Itens de Informação - Mantido) */
+.content-wrap {
+    /* Não precisa ser flex aqui, pois é um contêiner de margem/padding */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.content-wrap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Adicionado display flex para a lista de contatos */
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+}
+.info-item {
+    width: calc(33.33% - 13.33px); 
+    min-width: 250px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+.info-item p {
+    margin: 0 0 0.3125rem 0;
+    font-weight: 600;
+}
+.info-item a {
+    color: var(--cor-link);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* ------------------ */
+/* Seção SERVIÇOS */
+/* ------------------ */
+.servicos-grid {
+    display: grid;
+    /* Geração de colunas responsivas automáticas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.servico-item {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px hsla(0, 0%, 82%, 0.812);
+    transition: transform 0.3s;
+}
+
+.servico-item:hover {
+    transform: translateY(-5px);
+}
+
+.servico-item h3 {
+    color: var(--cor-primaria);
+    font-size: 1.25rem;
+    margin-top: 0;
+}
+
+/* ------------------ */
+/* Seção CLIENTES */
+/* ------------------ */
+.lista-clientes-atendimento {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+}
+
+.lista-clientes-atendimento li {
+    font-weight: 600;
+    color: #444;
+}
+
+/* ------------------ */
+/* Seção CONTATO/FALE CONOSCO */
+/* ------------------ */
+.contato-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.form-contato, .contato-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* CORREÇÃO: Adicionado box-sizing: border-box para inputs */
+.form-contato input, 
+.form-contato textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Essencial para que o padding não estoure a largura */
+}
+
+/* Classe de Acessibilidade: Oculta o label visualmente, mas o mantém para leitores de tela */
+.sr-only { 
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.btn-enviar {
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #C4A400;
+    color: #FFF;
+}
+
+/* ------------------ */
+/* Seção FOTOS/GALERIA */
+/* ------------------ */
+.galeria-fotos-grid {
+    display: grid;
+    /* Geração de colunas responsivas automáticas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.foto-galeria {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 1.25rem;
+    background-color: #7b7b7b;
+    color: #fff;
+    padding: 1.25rem;
+    text-align: center;
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+footer a {
+    color: #add8e6;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de Voltar ao Topo */
+.btn-topo {
+    position: fixed; 
+    bottom: 1.25rem; 
+    right: 1.25rem; 
+    z-index: 999; 
+    background-color: var(--cor-link); 
+    color: white;
+    border: none;
+    border-radius: 50%; 
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0; 
+    transition: opacity 0.3s, transform 0.3s;
+    transform: scale(0.9);
+}
+.btn-topo.show {
+    opacity: 1;
+    transform: scale(1);
+}
+.btn-topo:hover {
+    background-color: #0056b3;
+}
+
+
+/* ------------------------------------- */
+/* RESPONSIVIDADE */
+/* ------------------------------------- */
+
+/* Ajuste para tablets (max-width: 992px) */
+@media (max-width: 992px) {
+    .header-area {
+        flex-wrap: wrap; 
+        justify-content: flex-start;
+    }
+    .logo {
+        width: 120px;
+        margin-right: 10px;
+    }
+    .conteudo-principal {
+        min-width: 200px;
+    }
+    .menu-principal {
+        flex-basis: 100%; 
+        margin-top: 0.625rem;
+        justify-content: flex-start;
+        margin-left: 0; 
+    }
+    .menu-principal a {
+        padding: 0.5rem 0.625rem;
+        font-size: 0.8rem;
+    }
+    .info-item {
+        /* Passa de 3 para 2 colunas */
+        width: calc(50% - 10px); 
+    }
+}
+
+/* Ajuste para mobile (max-width: 576px) */
+@media (max-width: 576px) {
+    .header-area {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.625rem;
+    }
+    .header-branding {
+        /* Logo e Título empilham */
+        flex-direction: column; 
+        width: 100%;
+        text-align: center;
+    }
+    .logo {
+        width: 100px;
+        margin-bottom: 0.3125rem;
+        margin-right: 0;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+    .menu-principal {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.625rem;
+        gap: 5px;
+        align-items: center;
+    }
+    .menu-principal a {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    /* CORREÇÃO: Contato e blocos de conteúdo empilham */
+    .contato-flex {
+        flex-direction: column;
+    }
+    
+    .texto-esquerda {
+        padding: 0 0.625rem;
+    }
+    .info-item {
+        width: 100%;
+        min-width: unset;
+    }
+    .btn-topo {
+        right: 0.625rem;
+        bottom: 0.625rem;
+    }
+    footer {
+        padding: 0.9375rem 0.625rem;
+    }
+}

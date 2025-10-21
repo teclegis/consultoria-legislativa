@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria Legislativa Ltda.</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header-area">
+        <div class="header-branding">
+            <img src="./assets/img/logo-juridico.png" alt="Logo da Teclegis Consultoria Legislativa" class="logo">
+
+            <div class="conteudo-principal">
+                <h1>Consultoria Legislativa</h1>
+                <p class="paragrafo-afastado">Assessoria Especializada em Direito Legislativo Municipal</p>
+            </div>
+        </div>
+
+        <nav 
+        
+        class="menu-principal" aria-label="Navegação Principal do Site">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#clientes">Clientes</a>
+            <a href="#sobre-nos">Sobre Nós</a>
+            <a href="#contato">Contato</a>
+            <a href="#contato">Fale Conosco</a> <a href="#galeria">Fotos</a>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <a id="inicio"></a>
+
+        <section class="intro-section texto-esquerda section-padrao">
+            <h2 class="titulo-intro">Bem vindos a nossa página oficial!</h2>
+            <p class="texto-intro">
+            Consultoria pensada e desenvolvida para servir com qualidade, austeridade e eficiência.
+            </p>
+        </section>
+
+        <section id="servicos" class="section-padrao bg-claro">
+            <div class="content-wrap">
+                <h2>Otimizando a Gestão Pública</h2>
+                <p>Oferecemos suporte técnico-jurídico especializado para garantir que seu órgão tome decisões baseadas em legalidade, transparência e eficiência.</p>
+
+                <div class="servicos-grid">
+                    <article class="servico-item">
+                        <h3>Assessoria Técnico-Legislativa</h3>
+                        <p>Elaboração, revisão e adequação de projetos de lei, resoluções, portarias e regimentos
+                            internos, garantindo a perfeita técnica legislativa (LC 95/1998).</p>
+                    </article>
+                    <article class="servico-item">
+                        <h3>Consultoria em Orçamento e Finanças</h3>
+                        <p>Análise e acompanhamento de PPA, LDO e LOA. Consultoria em emendas impositivas, Lei de
+                            Responsabilidade Fiscal (LRF) e controle de contas públicas.</p>
+                    </article>
+                    <article class="servico-item">
+                        <h3>Licitações e Contratos (Lei 14.133/2021)</h3>
+                        <p>Suporte completo na aplicação da Nova Lei de Licitações, desde a fase preparatória até a
+                            gestão contratual, prevenindo nulidades e questionamentos dos TCEs.</p>
+                    </article>
+                    <article class="servico-item">
+                        <h3>Transparência e Compliance</h3>
+                        <p>Adequação à Lei de Acesso à Informação (LAI) e Lei Geral de Proteção de Dados (LGPD).
+                            Fortalecimento dos programas de ética e integridade do seu órgão.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="clientes" class="section-padrao">
+            <div class="content-wrap">
+                <h2>Quem Confia na Nossa Experiência</h2>
+                <p>Nosso foco é dar suporte a quem decide e legisla, garantindo segurança jurídica e eficácia administrativa.</p>
+                <p>Trabalhamos com objetivo em resolução e inovação.</p>
+            </div>
+        </section>
+
+        <section id="sobre-nos" class="section-padrao bg-claro">
+            <div class="content-wrap">
+                <h2>Compromisso com a Legalidade e a Inovação</h2>
+
+                <article class="missao-visao">
+                    <h3>Nossa Missão</h3>
+                    <p>Ser o pilar técnico para o Poder Legislativo Municipal, promovendo a excelência na produção
+                    normativa e na gestão de políticas administrativas, com foco na probidade,  inovação e no interesse social.</p>
+
+                    <h3>Nossa Equipe</h3>
+                    <p>Contamos com consultores de carreira, advogados e analistas especializados em Direito Público,
+                        Orçamento e Controle. Profissionais com anos de experiência em funções consultivas no
+                        Legislativo.</p>
+                </article>
+
+                <a href="#contato" class="btn-primario">Conheça Nossos Consultores</a>
+            </div>
+        </section>
+
+        <section id="contato" class="section-padrao">
+            <div class="content-wrap">
+                <h2>Entre em Contato: Sua Decisão Segura Começa Aqui</h2>
+
+                <div class="contato-flex">
+                    <form action="/enviar-formulario" method="POST" class="form-contato">
+                        <p>Preencha os campos e retornaremos em até 24 horas.</p>
+
+                        <label for="nome-contato" class="sr-only">Seu Nome/Nome do Órgão</label>
+                        <input type="text" id="nome-contato" name="nome" placeholder="Seu Nome/Nome do Órgão" required>
+
+                        <label for="email-contato" class="sr-only">E-mail Institucional</label>
+                        <input type="email" id="email-contato" name="email" placeholder="E-mail Institucional" required>
+
+                        <label for="tel-contato" class="sr-only">Telefone (WhatsApp)</label>
+                        <input type="tel" id="tel-contato" name="telefone" placeholder="Telefone (WhatsApp)" required>
+
+                        <label for="msg-contato" class="sr-only">Sua Mensagem ou Área de Interesse</label>
+                        <textarea id="msg-contato" name="mensagem"
+                            placeholder="Sua Mensagem ou Área de Interesse (Ex: Licitações, Lei Orgânica)" rows="4"
+                            required></textarea>
+
+                        <button type="submit" class="btn-enviar">Enviar Pedido de Consultoria</button>
+                    </form>
+
+                    <div class="contato-info">
+                        <h3>Atendimento Direto</h3>
+                        <p><strong>Telefone Principal:</strong> <a href="tel:+553239376070">(32) 3937-6070</a></p>
+                        <p><strong>WhatsApp:</strong> <a href="https://wa.me/5532991366077" target="_blank">(32)
+                                99136-6077</a></p>
+                        <p><strong>E-mail:</strong> <a href="mailto:contato@teclegis.com.br">contato@teclegis.com.br</a>
+                        </p>
+
+                        <h3 style="margin-top: 1.5rem;">Localização</h3>
+                        <address>
+                            Rua Exemplo, 123 - Centro<br>
+                            Cidade/Estado - CEP 36000-000
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="section-padrao bg-claro">
+            <div class="content-wrap">
+                <h2>Nossa Estrutura e Eventos</h2>
+                <p>Valorizamos a transparência e a proximidade com nossos clientes. Veja alguns momentos e nossa
+                    estrutura de atendimento.</p>
+
+                <div class="galeria-fotos-grid">
+                    
+                    <img src="./assets/escritorio/img-1.avif" alt="Equipe em reunião de consultoria"
+                        class="foto-galeria">
+                    <img src="./assets/img/escritorio.jpg" alt="Escritório moderno da consultoria" class="foto-galeria">
+                    <img src="./assets/img/palestra.jpg" alt="Consultor em palestra sobre legislação"
+                        class="foto-galeria">
+                    <img src="./assets/img/certificacao.jpg" alt="Certificados de qualidade da consultoria"
+                        class="foto-galeria">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Consultoria Legislativa Ltda. Todos os direitos reservados.</p>
+
+        <nav class="footer-nav">
+            <a href="/termos">Termos de Uso</a> |
+            <a href="/privacidade">Política de Privacidade</a> |
+            <a href="/contato">Contato</a>
+        </nav>
+    </footer>
+
+    <button id="btnVoltarTopo" class="btn-topo" title="Voltar para o topo">
+        &#9650;
+    </button>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
